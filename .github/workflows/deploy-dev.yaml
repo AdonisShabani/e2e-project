@@ -50,4 +50,4 @@ jobs:
       - name: Helm install/upgrade chart
         env:
           IMAGE_TAG: latest
-        run: helm upgrade devops-training-adonis-assignment-5 ./helm/terraform-assignment-5/ -f ./helm/terraform-assignment-5/values.yaml --install --namespace devops-training-adonis --create-namespace --set app.image_tag=${{ env.IMAGE_TAG }}
+        run: helm upgrade devops-training-adonis-assignment-5 ./helm/backend/ -f ./helm/backend/values.yaml --install --namespace devops-training-adonis --create-namespace --set app.image_tag=${{ env.IMAGE_TAG }}
